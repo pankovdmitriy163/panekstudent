@@ -54,6 +54,12 @@ function Laptop() {
                 </div>
               ))}
             </div>
+            <a
+              href="#contact"
+              className="mt-1 inline-flex items-center justify-center rounded-xl bg-violet px-4 py-2 text-[0.72rem] font-bold text-white shadow-[var(--shadow-violet)] transition-transform duration-200 hover:scale-[1.03]"
+            >
+              Связаться
+            </a>
           </div>
         </div>
       </div>
