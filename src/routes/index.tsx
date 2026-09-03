@@ -260,7 +260,7 @@ function Index() {
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="https://t.me/"
+              href="https://web.telegram.org/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2.5 rounded-2xl bg-[#229ED9] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(34,158,217,0.7)] transition-transform duration-200 hover:scale-[1.03]"
