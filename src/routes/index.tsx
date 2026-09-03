@@ -121,20 +121,10 @@ function Index() {
               собираются в одном потоке — вы получаете страницу, которая выглядит дорого и
               приносит заявки с первого дня.
             </p>
-            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <a
-                href="#projects"
-                className="inline-flex w-full items-center justify-center rounded-2xl bg-amber px-7 py-4 text-sm font-bold text-ink shadow-[var(--shadow-amber)] transition-transform duration-200 hover:scale-[1.03] sm:w-auto"
-              >
-                Посмотреть проекты
-              </a>
-              <a
-                href="#contact"
-                className="inline-flex w-full items-center justify-center rounded-2xl border border-violet/50 bg-violet/15 px-7 py-4 text-sm font-semibold text-white backdrop-blur transition-colors hover:bg-violet/30 sm:w-auto"
-              >
-                Связаться
-              </a>
-            </div>
+            <p className="mt-8 text-2xl font-black tracking-tight text-glow-amber sm:text-3xl">
+              Проекты
+            </p>
+
           </div>
 
           <div className="order-3 flex w-full justify-center lg:w-[24%]">
