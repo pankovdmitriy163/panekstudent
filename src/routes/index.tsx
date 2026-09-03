@@ -184,12 +184,8 @@ function Index() {
         <div className="relative mx-auto max-w-6xl">
           <h2 className="text-center text-2xl font-bold sm:text-4xl">Проекты</h2>
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
-            {[
-              ["Лендинг онлайн-курса", "Запуск за 5 дней, конверсия в заявку 11%"],
-              ["Сайт студии интерьеров", "Портфолио с плавной анимацией и заявкой"],
-              ["Web-приложение учёта", "Дашборд, авторизация, отчёты"],
-              ["Промо-страница продукта", "Сторителлинг и скролл-анимации"],
-            ].map(([t, d]) => (
+            {PROJECTS.map(([t, d]) => (
+
               <article
                 key={t}
                 className="group rounded-3xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-violet/50"
