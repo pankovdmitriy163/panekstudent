@@ -24,28 +24,36 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+const PROJECTS: [string, string][] = [
+  ["Лендинг онлайн-курса", "Запуск за 5 дней, конверсия в заявку 11%"],
+  ["Сайт студии интерьеров", "Портфолио с плавной анимацией и заявкой"],
+  ["Web-приложение учёта", "Дашборд, авторизация, отчёты"],
+  ["Промо-страница продукта", "Сторителлинг и скролл-анимации"],
+];
+
 function Laptop() {
   return (
     <div className="float-soft w-full max-w-[420px]">
       <div className="rounded-2xl border border-white/10 bg-ink-2/80 p-2 shadow-[0_40px_120px_-40px_rgba(0,0,0,0.9)] backdrop-blur-xl">
         <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-gradient-to-br from-ink-2 to-ink">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,color-mix(in_oklab,var(--violet)_35%,transparent),transparent_60%)]" />
-          <div className="relative flex h-full flex-col justify-between p-4 sm:p-6">
+          <div className="relative flex h-full flex-col gap-2 p-4 sm:p-5">
             <div className="flex gap-1.5">
               <span className="h-2 w-2 rounded-full bg-white/25" />
               <span className="h-2 w-2 rounded-full bg-white/25" />
               <span className="h-2 w-2 rounded-full bg-white/25" />
             </div>
-            <div className="space-y-2">
-              <div className="h-2 w-2/3 rounded-full bg-white/15" />
-              <div className="h-2 w-1/2 rounded-full bg-white/10" />
+            <div className="flex flex-1 flex-col justify-center gap-2">
+              {PROJECTS.slice(0, 2).map(([t, d]) => (
+                <div
+                  key={t}
+                  className="rounded-xl border border-white/10 bg-white/[0.05] px-3 py-2 backdrop-blur"
+                >
+                  <p className="text-[0.72rem] font-bold leading-tight text-white">{t}</p>
+                  <p className="mt-1 text-[0.65rem] leading-snug text-white/60">{d}</p>
+                </div>
+              ))}
             </div>
-            <a
-              href="#contact"
-              className="inline-flex w-full items-center justify-center rounded-xl bg-violet px-5 py-3 text-sm font-semibold tracking-wide text-white shadow-[var(--shadow-violet)] transition-transform duration-200 hover:scale-[1.03]"
-            >
-              Связаться
-            </a>
           </div>
         </div>
       </div>
@@ -62,23 +70,23 @@ function Phone() {
         <div className="relative aspect-[9/19] overflow-hidden rounded-[2rem] bg-gradient-to-b from-ink-2 to-ink">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_15%,color-mix(in_oklab,var(--amber)_30%,transparent),transparent_60%)]" />
           <div className="absolute left-1/2 top-3 h-1.5 w-16 -translate-x-1/2 rounded-full bg-white/20" />
-          <div className="relative flex h-full flex-col justify-end gap-3 p-4">
-            <div className="space-y-2">
-              <div className="h-16 rounded-2xl bg-white/[0.06]" />
-              <div className="h-16 rounded-2xl bg-white/[0.04]" />
-            </div>
-            <a
-              href="#projects"
-              className="inline-flex w-full items-center justify-center rounded-2xl bg-amber px-4 py-3 text-sm font-bold text-ink shadow-[var(--shadow-amber)] transition-transform duration-200 hover:scale-[1.03]"
-            >
-              Посмотреть проекты
-            </a>
+          <div className="relative flex h-full flex-col justify-center gap-3 p-4">
+            {PROJECTS.slice(2).map(([t, d]) => (
+              <div
+                key={t}
+                className="rounded-2xl border border-white/10 bg-white/[0.05] p-3 backdrop-blur"
+              >
+                <p className="text-[0.78rem] font-bold leading-tight text-white">{t}</p>
+                <p className="mt-1 text-[0.68rem] leading-snug text-white/60">{d}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </div>
   );
 }
+
 
 function Index() {
   return (
