@@ -258,12 +258,22 @@ function Index() {
           <p className="mt-4 text-white/65">
             Расскажите задачу — предложу структуру и сроки в течение дня.
           </p>
-          <a
-            href="mailto:hello@example.com"
-            className="mt-8 inline-flex items-center justify-center rounded-2xl bg-violet px-8 py-4 text-sm font-semibold text-white shadow-[var(--shadow-violet)] transition-transform duration-200 hover:scale-[1.03]"
-          >
-            Связаться
-          </a>
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a
+              href="https://t.me/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-2xl bg-amber px-8 py-4 text-sm font-semibold text-ink shadow-[var(--shadow-amber)] transition-transform duration-200 hover:scale-[1.03]"
+            >
+              Написать в TG
+            </a>
+            <a
+              href="mailto:hello@example.com"
+              className="inline-flex items-center justify-center rounded-2xl bg-violet px-8 py-4 text-sm font-semibold text-white shadow-[var(--shadow-violet)] transition-transform duration-200 hover:scale-[1.03]"
+            >
+              Связаться по @mail
+            </a>
+          </div>
         </div>
       </section>
     </main>
