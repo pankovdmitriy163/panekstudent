@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import wondersHero from "@/assets/wonders-hero.jpg";
 import wondersMist from "@/assets/wonders-mist.jpg";
+import projectTelegram from "@/assets/project-telegram.jpg";
+import projectNeuro from "@/assets/project-neuro.jpg";
+import projectLaunchpro from "@/assets/project-launchpro.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
