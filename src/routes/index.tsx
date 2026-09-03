@@ -260,7 +260,7 @@ function Index() {
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="https://t.me/"
+              href="https://web.telegram.org/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2.5 rounded-2xl bg-[#229ED9] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(34,158,217,0.7)] transition-transform duration-200 hover:scale-[1.03]"
@@ -271,7 +271,9 @@ function Index() {
               Написать в Telegram
             </a>
             <a
-              href="mailto:hello@example.com"
+              href="https://mail.google.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2.5 rounded-2xl border border-white/15 bg-white px-6 py-3.5 text-sm font-semibold text-[#1f1f1f] shadow-[0_8px_24px_-8px_rgba(0,0,0,0.4)] transition-transform duration-200 hover:scale-[1.03]"
             >
               <svg viewBox="0 0 48 48" className="h-5 w-5 shrink-0" aria-hidden="true">
