@@ -86,6 +86,12 @@ function Phone() {
                 <p className="mt-1 text-[0.68rem] leading-snug text-white/60">{d}</p>
               </div>
             ))}
+            <a
+              href="#projects"
+              className="inline-flex items-center justify-center rounded-2xl bg-amber px-4 py-2.5 text-[0.78rem] font-bold text-ink shadow-[var(--shadow-amber)] transition-transform duration-200 hover:scale-[1.03]"
+            >
+              Посмотреть проекты
+            </a>
           </div>
         </div>
       </div>
