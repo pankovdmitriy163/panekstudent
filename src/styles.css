@@ -132,13 +132,59 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+:root {
+  --ink: oklch(0.14 0.02 275);
+  --ink-2: oklch(0.19 0.03 285);
+  --amber: oklch(0.78 0.16 68);
+  --violet: oklch(0.62 0.21 300);
+  --gradient-veil: linear-gradient(
+    180deg,
+    transparent 0%,
+    color-mix(in oklab, var(--ink) 60%, transparent) 40%,
+    var(--ink) 100%
+  );
+  --shadow-amber: 0 18px 60px -18px color-mix(in oklab, var(--amber) 65%, transparent);
+  --shadow-violet: 0 18px 60px -18px color-mix(in oklab, var(--violet) 70%, transparent);
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-amber: var(--amber);
+  --color-violet: var(--violet);
+}
+
+@utility surface-veil {
+  background-image: var(--gradient-veil);
+}
+
+@utility text-glow-amber {
+  color: var(--amber);
+  text-shadow: 0 0 32px color-mix(in oklab, var(--amber) 45%, transparent);
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@utility float-soft {
+  animation: float-soft 7s ease-in-out infinite;
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
   }
 
   body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background-color: var(--ink);
+    color: oklch(0.97 0.01 280);
   }
 }
+
