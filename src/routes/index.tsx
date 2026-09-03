@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import wondersHero from "@/assets/wonders-hero.jpg";
 import wondersMist from "@/assets/wonders-mist.jpg";
+import projectTelegram from "@/assets/project-telegram.jpg";
+import projectNeuro from "@/assets/project-neuro.jpg";
+import projectLaunchpro from "@/assets/project-launchpro.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -193,36 +196,36 @@ function Index() {
                 t: "Бот новостей в Telegram",
                 d: "Бот для персонализированного контента: подбирает новости под интересы пользователя и присылает дайджест.",
                 tags: ["Telegram Bot API", "Node.js", "OpenAI", "PostgreSQL"],
+                img: projectTelegram,
               },
               {
                 t: "НейроАналитик",
                 d: "AI-сервис для анализа данных: превращает сырые метрики в понятные выводы и прогнозы за минуты.",
                 tags: ["Python", "FastAPI", "LLM", "React"],
+                img: projectNeuro,
               },
               {
                 t: "LaunchPro",
                 d: "Лендинг для продукта: структура под запуск, скролл-сторителлинг и конверсия в заявку.",
                 tags: ["TanStack Start", "Tailwind", "Vite", "SEO"],
+                img: projectLaunchpro,
               },
             ].map((p) => (
               <div
                 key={p.t}
                 className="flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur transition-colors hover:border-amber/40"
               >
-                {/* preview placeholder */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-ink-2 to-ink">
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <img
+                    src={p.img}
+                    alt={p.t}
+                    width={1280}
+                    height={800}
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover opacity-80"
+                  />
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_25%,color-mix(in_oklab,var(--violet)_30%,transparent),transparent_60%)]" />
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_80%,color-mix(in_oklab,var(--amber)_25%,transparent),transparent_55%)]" />
-                  <div className="relative flex h-full flex-col gap-2 p-5">
-                    <div className="flex gap-1.5">
-                      <span className="h-2 w-2 rounded-full bg-white/25" />
-                      <span className="h-2 w-2 rounded-full bg-white/25" />
-                      <span className="h-2 w-2 rounded-full bg-white/25" />
-                    </div>
-                    <div className="mt-auto rounded-xl border border-white/10 bg-white/[0.05] px-3 py-2">
-                      <p className="text-[0.7rem] font-bold text-white">{p.t}</p>
-                    </div>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
                 </div>
                 {/* content */}
                 <div className="flex flex-1 flex-col p-6">
