@@ -133,10 +133,6 @@ function Index() {
               собираются в одном потоке — вы получаете страницу, которая выглядит дорого и
               приносит заявки с первого дня.
             </p>
-            <p className="mt-8 text-2xl font-black tracking-tight text-glow-amber sm:text-3xl">
-              Проекты
-            </p>
-
           </div>
 
           <div className="order-3 flex w-full justify-center lg:w-[24%]">
@@ -177,34 +173,6 @@ function Index() {
                 <h3 className="text-lg font-bold text-glow-amber">{c.t}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-white/65">{c.d}</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* PROJECTS */}
-      <section id="projects" className="relative px-5 py-28 sm:px-8">
-        <img
-          src={wondersMist}
-          alt="Туманный пейзаж"
-          loading="lazy"
-          width={1920}
-          height={1080}
-          className="absolute inset-0 h-full w-full object-cover opacity-25"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink via-ink/70 to-ink" />
-        <div className="relative mx-auto max-w-6xl">
-          <h2 className="text-center text-2xl font-bold sm:text-4xl">Проекты</h2>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2">
-            {PROJECTS.map(([t, d]) => (
-
-              <article
-                key={t}
-                className="group rounded-3xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-violet/50"
-              >
-                <h3 className="text-xl font-bold">{t}</h3>
-                <p className="mt-2 text-sm text-white/60">{d}</p>
-              </article>
             ))}
           </div>
         </div>
