@@ -105,7 +105,7 @@ function Phone() {
 
 function Index() {
   return (
-    <main className="relative overflow-hidden bg-ink">
+    <main className="relative overflow-hidden bg-ink scroll-smooth">
       {/* HERO */}
       <section className="relative min-h-screen">
         <img
@@ -251,7 +251,7 @@ function Index() {
       {/* CONTACT */}
       <section
         id="contact"
-        className="relative bg-gradient-to-b from-ink via-ink-2/70 to-ink px-5 py-32 sm:px-8"
+        className="relative scroll-mt-8 bg-gradient-to-b from-ink via-ink-2/70 to-ink px-5 py-32 sm:px-8"
       >
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-2xl font-bold sm:text-4xl">Обсудим ваш проект?</h2>
