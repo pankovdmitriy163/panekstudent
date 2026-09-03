@@ -178,6 +178,73 @@ function Index() {
         </div>
       </section>
 
+      {/* FEATURED PROJECTS */}
+      <section
+        id="projects"
+        className="relative bg-gradient-to-b from-ink via-ink-2/60 to-ink px-5 py-28 sm:px-8"
+      >
+        <div className="mx-auto max-w-6xl">
+          <h2 className="text-center text-2xl font-bold sm:text-4xl">
+            Избранные проекты
+          </h2>
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                t: "Бот новостей в Telegram",
+                d: "Бот для персонализированного контента: подбирает новости под интересы пользователя и присылает дайджест.",
+                tags: ["Telegram Bot API", "Node.js", "OpenAI", "PostgreSQL"],
+              },
+              {
+                t: "НейроАналитик",
+                d: "AI-сервис для анализа данных: превращает сырые метрики в понятные выводы и прогнозы за минуты.",
+                tags: ["Python", "FastAPI", "LLM", "React"],
+              },
+              {
+                t: "LaunchPro",
+                d: "Лендинг для продукта: структура под запуск, скролл-сторителлинг и конверсия в заявку.",
+                tags: ["TanStack Start", "Tailwind", "Vite", "SEO"],
+              },
+            ].map((p) => (
+              <div
+                key={p.t}
+                className="flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur transition-colors hover:border-amber/40"
+              >
+                {/* preview placeholder */}
+                <div className="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-ink-2 to-ink">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_25%,color-mix(in_oklab,var(--violet)_30%,transparent),transparent_60%)]" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_80%,color-mix(in_oklab,var(--amber)_25%,transparent),transparent_55%)]" />
+                  <div className="relative flex h-full flex-col gap-2 p-5">
+                    <div className="flex gap-1.5">
+                      <span className="h-2 w-2 rounded-full bg-white/25" />
+                      <span className="h-2 w-2 rounded-full bg-white/25" />
+                      <span className="h-2 w-2 rounded-full bg-white/25" />
+                    </div>
+                    <div className="mt-auto rounded-xl border border-white/10 bg-white/[0.05] px-3 py-2">
+                      <p className="text-[0.7rem] font-bold text-white">{p.t}</p>
+                    </div>
+                  </div>
+                </div>
+                {/* content */}
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="text-lg font-bold text-glow-amber">{p.t}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-white/65">{p.d}</p>
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {p.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[0.7rem] font-medium text-white/70"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CONTACT */}
       <section
         id="contact"
